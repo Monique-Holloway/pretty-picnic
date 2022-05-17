@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(60deg, white, rgb(127, 212, 173), white);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* styling of all buttons */
+.button {
+  margin: 20px;
+  border-radius: 4px;
+  border-color: rgb(202, 167, 173);
+  background-color: rgb(202, 167, 173);
+  color: rgb(75, 57, 57);
+  font-size: 16px;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+/* styling of cute dog pics */
+.dog {
+  max-width: 500px;
+  max-height: 500px;
 }
