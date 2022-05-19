@@ -1,16 +1,40 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(60deg, white, rgb(127, 212, 173), white);
+  background: linear-gradient(60deg, white, rgb(224, 199, 204), white);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* header styling */
+.App-header {
+  font-style: italic;
+  font-size: xx-large;
+}
+
+/* styling of Occasion Pics */
+.ImageContainer {
+  border: 2px solid blue;
+  /* below is keeping cards in container border */
+  display: inline-flex;
+}
+
+.App .ImageContainer .OccasionImageContainer .OccasionCard {
+  margin: 10px;
+  /* border: 2px solid red;  */
+  /* display: flex; */
+  /* flex-basis: auto; */
+  display: inline-flex;
+}
+
+/* styling of Color Schemes */
+.SchemeContainer {
+  border: 2px solid blue;
+  display: inline-flex;
+}
+
+.App .SchemeContainer .ColorSchemeContainer .ColorCard {
+  margin: 10px;
+  /* border: 2px solid red;  */
+  /* display: flex; */
+  /* flex-basis: auto; */
+  display: inline-flex;
 }
 
 /* styling of all buttons */
@@ -25,7 +49,8 @@ code {
 }
 
 /* styling of cute dog pics */
-.dog {
+.dog img {
   max-width: 500px;
   max-height: 500px;
 }
+
