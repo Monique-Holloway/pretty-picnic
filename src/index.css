@@ -10,12 +10,12 @@ body {
 
 /* styling of Occasion Pics */
 .ImageContainer {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   /* below is keeping cards in container border */
   display: inline-flex;
 }
 
-.App .ImageContainer .OccasionImageContainer .OccasionCard {
+.App .ContainerOfImages .ImageContainer .OccasionImageContainer .OccasionCard {
   margin: 10px;
   /* border: 2px solid red;  */
   /* display: flex; */
@@ -25,7 +25,7 @@ body {
 
 /* styling of Color Schemes */
 .SchemeContainer {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: inline-flex;
 }
 
@@ -37,7 +37,79 @@ body {
   display: inline-flex;
 }
 
-/* styling of all buttons */
+.App .guestNumber {
+  padding: 30px;
+  justify-content: center;
+}
+
+
+/* Styling of all buttons except dog API */
+.App .ContainerOfImages .ImageContainer .OccasionImageContainer .OccasionCard .button {
+  /* background-color: rgb(126, 77, 77); */
+  border-color: rgb(75, 57, 57);
+  background-color: rgb(202, 167, 173);
+  color: rgb(75, 57, 57);
+}
+
+.App .SchemeContainer .ColorSchemeContainer .ColorCard .button {
+  border-color: rgb(75, 57, 57);
+  background-color: rgb(202, 167, 173);
+  color: rgb(75, 57, 57);
+}
+
+#dropdown-basic-button {
+  border-color: rgb(75, 57, 57);
+  background-color: rgb(202, 167, 173);
+  color: rgb(75, 57, 57);
+}
+
+.App .FormContainer .button {
+  border-color: rgb(75, 57, 57);
+  background-color: rgb(202, 167, 173);
+  color: rgb(75, 57, 57);
+}
+
+/* Header fonts styling */
+.App .App-header {
+  padding-top: 50px;
+  font-family: cursive;
+  /* font-size: 70px; */
+}
+
+.App .occasionHeader {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-family: cursive;
+  font-size: 45px;
+}
+
+.App .colorSchemeHeader {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-family: cursive;
+}
+
+.App .guestNumber .guestNumberHeader {
+  padding: 10px;
+  font-family: cursive;
+}
+
+
+/* ---------------------------------------------------------- STYLING OF FORM ---------------------------------------------------------- */
+
+.App .formHeader {
+  font-size: 20px;
+  padding-left: 40px;
+}
+
+.App .FormContainer {
+  padding-left: 40px;
+  width: 600px !important; 
+}
+
+
+/* -------------------------------------------------- STYLING OF API DOG BUTTON ----------------------------------------------------------*/
+
 .button {
   margin: 20px;
   border-radius: 4px;
@@ -45,10 +117,11 @@ body {
   background-color: rgb(202, 167, 173);
   color: rgb(75, 57, 57);
   font-size: 16px;
-  font-family:Arial, Helvetica, sans-serif
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-/* styling of cute dog pics */
+/* ---------------------------------------------------- STYLING OF CUTE DOG PICS --------------------------------------------------------- */
+
 .dog img {
   max-width: 500px;
   max-height: 500px;

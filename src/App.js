@@ -5,7 +5,8 @@ import * as React from 'react';
 // import ReactDOM from 'react-dom';
 import OccasionImage from './OccasionImage.js';
 import ColorScheme from './ColorScheme.js';
-import GuestNumber from './GuestNumber.js'
+import GuestNumber from './GuestNumber.js';
+import PicnicForm from './Forms.js'
 
 function App() {
   const [dogImage, setDogImage] = useState('');
@@ -25,27 +26,43 @@ function App() {
         <center><h1>Pretty Picnic</h1></center>
       </header>
 
-      {/* Start of sign-up form */}
-      <div className='container'>
-      </div>
+      {/* occasion cards */}
+      <center>
+        <div className="ContainerOfImages">
+          <div>
+            <h2 className="occasionHeader">Occasion?</h2>
+          </div>
+          <div className="ImageContainer">
+            <OccasionImage />
+          </div>
+        </div>
+      </center>
+
+      {/* color scheme cards */}
       <center>
         <div>
-          <h2 className="occasionTopic">Occasion?</h2>
-        </div>
-        <div className="ImageContainer">
-          <OccasionImage />
-        </div>
-        <div>
-          <h2 className="occasionTopic">Desired color scheme?</h2>
+          <h2 className="colorSchemeHeader">Desired color scheme?</h2>
         </div>
         <div className="SchemeContainer">
           <ColorScheme />
         </div>
       </center>
-      <div>
-        <GuestNumber />
+
+      {/* # of guests dropdown */}
+      <div className="guestNumber">
+        <center>
+          <h2 className="guestNumberHeader">Number of guests?</h2>
+          <GuestNumber />
+        </center>
       </div>
-      {/* put at the bottom of page...after pics and form */}
+
+      {/* contact info form */}
+      <div>
+        <p className="formHeader">Please fill out ALL areas of the below form.</p>
+      </div>
+      <PicnicForm />
+
+      {/* click for a smile => start of dog API */}
       <center>
         <button className="button" onClick={generateASmile}>Click here for a smile!</button>
       </center>

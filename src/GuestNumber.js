@@ -5,7 +5,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 function GuestNumber () {
 
     return (
-        <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+        <DropdownButton id="dropdown-basic-button" title="Select # of guests">
             <Dropdown.Item href="#/action-1">2 people, $235</Dropdown.Item>
             <Dropdown.Item href="#/action-2">3 people, $299</Dropdown.Item>
             <Dropdown.Item href="#/action-3">4 people, $329</Dropdown.Item>

@@ -20,7 +20,7 @@ function OccasionImage() {
                         <Card.Text>
                             Celebrating a birthday?
                         </Card.Text>
-                        <Button variant="primary">Select</Button>
+                        <Button className="button" variant="primary">Select</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -32,7 +32,7 @@ function OccasionImage() {
                         <Card.Text>
                             Celebrating a union?
                         </Card.Text>
-                        <Button variant="primary">Select</Button>
+                        <Button className="button" variant="primary">Select</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -44,7 +44,7 @@ function OccasionImage() {
                         <Card.Text>
                             Want to just hang with the girls/guys?
                         </Card.Text>
-                        <Button variant="primary">Select</Button>
+                        <Button className="button" variant="primary">Select</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -56,7 +56,7 @@ function OccasionImage() {
                         <Card.Text>
                             Want a special date night with a special someone?
                         </Card.Text>
-                        <Button variant="primary">Select</Button>
+                        <Button className="button" variant="primary">Select</Button>
                     </Card.Body>
                 </Card>
             </div>
