@@ -13,8 +13,8 @@ function OccasionImage() {
     return (
         <div className="OccasionImageContainer">
             <div className="OccasionCard">
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={bdayPicnic} />
+                <Card className="cardBody" style={{ width: '18rem' }}>
+                    <Card.Img className="cardPic" variant="top" src={bdayPicnic} />
                     <Card.Body>
                         <Card.Title>Birthday Picnic</Card.Title>
                         <Card.Text>
@@ -25,8 +25,8 @@ function OccasionImage() {
                 </Card>
             </div>
             <div className="OccasionCard">
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={bridalPicnic} />
+                <Card className="cardBody" style={{ width: '18rem' }}>
+                    <Card.Img className="cardPic" variant="top" src={bridalPicnic} />
                     <Card.Body>
                         <Card.Title>Bridal Picnic</Card.Title>
                         <Card.Text>
@@ -37,24 +37,24 @@ function OccasionImage() {
                 </Card>
             </div>
             <div className="OccasionCard">
-                <Card style={{ width: '18rem' }}>
+                <Card className="cardBody" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={hangoutPicnic} />
                     <Card.Body>
                         <Card.Title>Hangout Picnic</Card.Title>
                         <Card.Text>
-                            Want to just hang with the girls/guys?
+                            Hanging with friends?
                         </Card.Text>
                         <Button className="button" variant="primary">Select</Button>
                     </Card.Body>
                 </Card>
             </div>
             <div className="OccasionCard">
-                <Card style={{ width: '18rem' }}>
+                <Card className="cardBody" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={romanticPicnic} />
                     <Card.Body>
                         <Card.Title>Romantic Picnic</Card.Title>
                         <Card.Text>
-                            Want a special date night with a special someone?
+                            Special someone?
                         </Card.Text>
                         <Button className="button" variant="primary">Select</Button>
                     </Card.Body>

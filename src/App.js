@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <center><h1>Pretty Picnic</h1></center>
+        <center><p>Pretty Picnic</p></center>
       </header>
 
       {/* occasion cards */}

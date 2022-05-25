@@ -15,6 +15,15 @@ body {
   display: inline-flex;
 }
 
+.App .ContainerOfImages .ImageContainer .OccasionImageContainer {
+  margin-bottom: 125px;
+}
+
+.App .ContainerOfImages .ImageContainer .OccasionImageContainer .OccasionCard .cardBody {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
 .App .ContainerOfImages .ImageContainer .OccasionImageContainer .OccasionCard {
   margin: 10px;
   /* border: 2px solid red;  */
@@ -35,6 +44,11 @@ body {
   /* display: flex; */
   /* flex-basis: auto; */
   display: inline-flex;
+}
+
+.App .SchemeContainer .ColorSchemeContainer .ColorCard .cardBody {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
 }
 
 .App .guestNumber {
@@ -73,25 +87,28 @@ body {
 .App .App-header {
   padding-top: 50px;
   font-family: cursive;
-  /* font-size: 70px; */
+  font-size: 100px;
 }
 
 .App .occasionHeader {
   padding-top: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-family: cursive;
-  font-size: 45px;
+  font-size: 60px;
 }
 
 .App .colorSchemeHeader {
-  padding-top: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-family: cursive;
+  font-size: 60px;
 }
 
 .App .guestNumber .guestNumberHeader {
   padding: 10px;
   font-family: cursive;
+  font-size: 60px;
+  margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 

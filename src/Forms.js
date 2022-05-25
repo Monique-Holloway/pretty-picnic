@@ -10,19 +10,19 @@ function PicnicForm () {
             <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="email" placeholder="Please type your FIRST and LAST name." />
+                    <Form.Control type="text" placeholder="Please type your FIRST and LAST name." />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Phone Number</Form.Label>
-                    <Form.Control type="email" placeholder="Best contact number to reach you." />
+                    <Form.Control type="text" placeholder="Best contact number to reach you." />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Picnic Location</Form.Label>
-                    <Form.Control type="email" placeholder="Name and address of the location." />
+                    <Form.Control type="text" placeholder="Name and address of the location." />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Date</Form.Label>
-                    <Form.Control type="email" placeholder="MM/DD/YYYY" />
+                    <Form.Control type="text" placeholder="MM/DD/YYYY" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
