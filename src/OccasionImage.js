@@ -4,14 +4,16 @@ import hangoutPicnic from './images/hangout.png';
 import romanticPicnic from './images/romantic.png';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import { useState } from 'react';
 
 function OccasionImage() { 
 
+const [occasion, setOccasion] = useState(false);
 
-// const picnicTypes = [{pic: bdayPicnic, picTitle:'celebrating a birthday'}]
-// console.log ('picnic type =', picnicTypes)
+
     return (
         <div className="OccasionImageContainer">
+            {console.log(occasion)}
             <div className="OccasionCard">
                 <Card className="cardBody" style={{ width: '18rem' }}>
                     <Card.Img className="cardPic" variant="top" src={bdayPicnic} />
@@ -20,7 +22,7 @@ function OccasionImage() {
                         <Card.Text>
                             Celebrating a birthday?
                         </Card.Text>
-                        <Button className="button" variant="primary">Select</Button>
+                        <Button className="button" variant="primary" onClick={()=>setOccasion(true)}>Select</Button>
                     </Card.Body>
                 </Card>
             </div>

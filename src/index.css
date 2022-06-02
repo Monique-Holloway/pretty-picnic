@@ -1,17 +1,29 @@
 body {
-  background: linear-gradient(60deg, white, rgb(224, 199, 204), white);
+  background: linear-gradient(60deg, rgb(192, 223, 221, .30), rgb(192, 223, 221, .30), rgb(192, 223, 221, .30));
+  /* background-repeat: none; */
 }
 
-/* header styling */
+/* ----------------------------------- HEADER STYLING --------------------------------------------------- */
 .App-header {
-  font-style: italic;
-  font-size: xx-large;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
-/* styling of Occasion Pics */
+/* ----------------------------------- STYLING OF OCCASION PICS ------------------------------------------ */
+.App .occasionHeader {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-family: cursive;
+  font-size: 60px;
+}
+
+/* .App .ContainerOfImages {
+  background-color: #C0D9CF;
+} */
+
 .ImageContainer {
-  /* border: 2px solid blue; */
-  /* below is keeping cards in container border */
   display: inline-flex;
 }
 
@@ -26,23 +38,30 @@ body {
 
 .App .ContainerOfImages .ImageContainer .OccasionImageContainer .OccasionCard {
   margin: 10px;
-  /* border: 2px solid red;  */
-  /* display: flex; */
-  /* flex-basis: auto; */
   display: inline-flex;
 }
 
-/* styling of Color Schemes */
+.App .ContainerOfImages .ImageContainer .OccasionImageContainer .OccasionCard .button {
+  background-color: rgb(120, 199, 194);
+  border: none;
+  color: black;
+  border-radius: 15px;
+}
+
+/* ----------------------------------- STYLING OF COLOR SCHEMES ----------------------------------------- */
+.App .colorSchemeHeader {
+  padding-bottom: 20px;
+  padding-top: 15px;
+  font-family: cursive;
+  font-size: 60px;
+}
+
 .SchemeContainer {
-  /* border: 2px solid blue; */
   display: inline-flex;
 }
 
 .App .SchemeContainer .ColorSchemeContainer .ColorCard {
   margin: 10px;
-  /* border: 2px solid red;  */
-  /* display: flex; */
-  /* flex-basis: auto; */
   display: inline-flex;
 }
 
@@ -56,53 +75,14 @@ body {
   justify-content: center;
 }
 
-
-/* Styling of all buttons except dog API */
-.App .ContainerOfImages .ImageContainer .OccasionImageContainer .OccasionCard .button {
-  /* background-color: rgb(126, 77, 77); */
-  border-color: rgb(75, 57, 57);
-  background-color: rgb(202, 167, 173);
-  color: rgb(75, 57, 57);
-}
-
 .App .SchemeContainer .ColorSchemeContainer .ColorCard .button {
-  border-color: rgb(75, 57, 57);
-  background-color: rgb(202, 167, 173);
-  color: rgb(75, 57, 57);
+  background-color: rgb(120, 199, 194);
+  border: none;
+  color: black;
+  border-radius: 15px;
 }
 
-#dropdown-basic-button {
-  border-color: rgb(75, 57, 57);
-  background-color: rgb(202, 167, 173);
-  color: rgb(75, 57, 57);
-}
-
-.App .FormContainer .button {
-  border-color: rgb(75, 57, 57);
-  background-color: rgb(202, 167, 173);
-  color: rgb(75, 57, 57);
-}
-
-/* Header fonts styling */
-.App .App-header {
-  padding-top: 50px;
-  font-family: cursive;
-  font-size: 100px;
-}
-
-.App .occasionHeader {
-  padding-top: 50px;
-  padding-bottom: 20px;
-  font-family: cursive;
-  font-size: 60px;
-}
-
-.App .colorSchemeHeader {
-  padding-bottom: 20px;
-  font-family: cursive;
-  font-size: 60px;
-}
-
+/* ----------------------------------- STYLING OF # OF GUESTS ------------------------------------- */
 .App .guestNumber .guestNumberHeader {
   padding: 10px;
   font-family: cursive;
@@ -111,6 +91,12 @@ body {
   margin-top: 20px;
 }
 
+#dropdown-basic-button {
+  background-color: rgb(120, 199, 194);
+  border: none;
+  color: black;
+  border-radius: 15px;
+}
 
 /* ---------------------------------------------------------- STYLING OF FORM ---------------------------------------------------------- */
 
@@ -121,11 +107,24 @@ body {
 
 .App .FormContainer {
   padding-left: 40px;
-  width: 600px !important; 
+  padding-right: 40px;
+  /* width: 800px !important;  */
 }
 
+.App .form {
+  background-color: rgba(222, 184, 135, .20);
+  /* width: 1000px !important; */
+  margin-top: 40px;
+}
 
-/* -------------------------------------------------- STYLING OF API DOG BUTTON ----------------------------------------------------------*/
+.App .FormContainer .button {
+  background-color: rgb(120, 199, 194);
+  border: none;
+  color: black;
+  border-radius: 15px;
+}
+
+/* -------------------------------------------------- STYLING OF API DOG BUTTON & PICS ----------------------------------------------------------*/
 
 .button {
   margin: 20px;
@@ -136,8 +135,6 @@ body {
   font-size: 16px;
   font-family:Arial, Helvetica, sans-serif;
 }
-
-/* ---------------------------------------------------- STYLING OF CUTE DOG PICS --------------------------------------------------------- */
 
 .dog img {
   max-width: 500px;

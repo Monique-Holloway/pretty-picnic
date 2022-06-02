@@ -7,6 +7,9 @@ import OccasionImage from './OccasionImage.js';
 import ColorScheme from './ColorScheme.js';
 import GuestNumber from './GuestNumber.js';
 import PicnicForm from './Forms.js'
+import geenius from './images/geenius.png'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 
 function App() {
   const [dogImage, setDogImage] = useState('');
@@ -22,9 +25,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <center><p>Pretty Picnic</p></center>
-      </header>
+      <center>
+          <img className="App-header" src={geenius} />
+      </center>
 
       {/* occasion cards */}
       <center>
@@ -37,30 +40,38 @@ function App() {
           </div>
         </div>
       </center>
-
+      
       {/* color scheme cards */}
       <center>
-        <div>
-          <h2 className="colorSchemeHeader">Desired color scheme?</h2>
-        </div>
-        <div className="SchemeContainer">
-          <ColorScheme />
+        <div className="colorContainer">
+          <div>
+            <h2 className="colorSchemeHeader">Desired color scheme?</h2>
+          </div>
+          <div className="SchemeContainer">
+            <ColorScheme />
+          </div>
         </div>
       </center>
 
       {/* # of guests dropdown */}
-      <div className="guestNumber">
-        <center>
+      <center>
+        <div className="guestNumber">
           <h2 className="guestNumberHeader">Number of guests?</h2>
           <GuestNumber />
-        </center>
-      </div>
+        </div>
+      </center>
 
       {/* contact info form */}
-      <div>
-        <p className="formHeader">Please fill out ALL areas of the below form.</p>
-      </div>
-      <PicnicForm />
+      <Container>
+        <Row className="justify-content-md-center">
+        <div className="form">
+          <div>
+            <p className="formHeader">Please fill out ALL areas of the below form.</p>
+          </div>
+          <PicnicForm />
+        </div>
+        </Row>
+      </Container>
 
       {/* click for a smile => start of dog API */}
       <center>
