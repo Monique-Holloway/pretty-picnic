@@ -2,7 +2,7 @@
 
 This project was built using the React framework. The motivation behind this project was to create a responsive website that would allow visitors to choose a type of picnic, their color scheme, number of guests and fill input their information into a form to send to the creator of Geenius Branding, LLC.
 
-Languages and frameworks used for this project include ReactJS, React Bootstrap, JSX, NodeJS, ExpressJS, & PostgreSQL.
+Languages and frameworks used for this project include HTML5, CSS3, ReactJS, React Bootstrap, JSX, NodeJS, ExpressJS, & PostgreSQL.
 
 Some challenges that were faced were getting buttons to register just one selection per category, as well as figuring out the SQL table and how to register the forms and selection of the picnic type, scheme and number per user submission.
 
