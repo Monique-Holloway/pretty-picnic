@@ -12,6 +12,7 @@ function GuestNumber () {
     const dispatch = useDispatch()
     
     const handleClick =(event) => {
+        console.log(event)
         event.preventDefault()
         dispatch(setGuestNumber(event.target.value))
     }
