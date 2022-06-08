@@ -5,12 +5,19 @@ import romanticPicnic from './images/romantic.png';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { actionSetOccasion } from './redux/actions';
 
 function OccasionImage() { 
 
-const [occasion, setOccasion] = useState(false);
+const [occasion, setOccasion] = useState('');
 
+const dispatch = useDispatch()
 
+const handleClick =(event) => {
+    event.preventDefault()
+    dispatch(actionSetOccasion(event.target.value))
+}
     return (
         <div className="OccasionImageContainer">
             {console.log(occasion)}
@@ -22,7 +29,7 @@ const [occasion, setOccasion] = useState(false);
                         <Card.Text>
                             Celebrating a birthday?
                         </Card.Text>
-                        <Button className="button" variant="primary" onClick={()=>setOccasion(true)}>Select</Button>
+                        <Button className="button" variant="primary" value='birthday' onClick={handleClick}>Select</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -34,7 +41,7 @@ const [occasion, setOccasion] = useState(false);
                         <Card.Text>
                             Celebrating a union?
                         </Card.Text>
-                        <Button className="button" variant="primary">Select</Button>
+                        <Button className="button" variant="primary" value='bridal' onClick={handleClick}>Select</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -46,7 +53,7 @@ const [occasion, setOccasion] = useState(false);
                         <Card.Text>
                             Hanging with friends?
                         </Card.Text>
-                        <Button className="button" variant="primary">Select</Button>
+                        <Button className="button" variant="primary" value='hangout' onClick={handleClick}>Select</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -58,7 +65,7 @@ const [occasion, setOccasion] = useState(false);
                         <Card.Text>
                             Special someone?
                         </Card.Text>
-                        <Button className="button" variant="primary">Select</Button>
+                        <Button className="button" variant="primary" value='romantic' onClick={handleClick}>Select</Button>
                     </Card.Body>
                 </Card>
             </div>

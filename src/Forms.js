@@ -1,10 +1,12 @@
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-
-
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 function PicnicForm () {
 
+    const picnicInfo = useSelector((state) => state)
+    console.log('thisIsTheData', picnicInfo)
     return (
         <div className="FormContainer">
             <Form>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import './index.css';
 import * as React from 'react';
 // what is this "import ReactDOM" on line 6?
@@ -12,21 +12,21 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 function App() {
-  const [dogImage, setDogImage] = useState('');
+  // const [dogImage, setDogImage] = useState('');
 
-  const generateASmile = () => {
-    fetch("https://dog.ceo/api/breeds/image/random")
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        setDogImage(data.message)
-      })
-  }
+  // const generateASmile = () => {
+  //   fetch("https://dog.ceo/api/breeds/image/random")
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data)
+  //       setDogImage(data.message)
+  //     })
+  // }
 
   return (
     <div className="App">
       <center>
-          <img className="App-header" src={geenius} />
+          <img className="App-header" alt='' src={geenius} />
       </center>
 
       {/* occasion cards */}
@@ -74,12 +74,12 @@ function App() {
       </Container>
 
       {/* click for a smile => start of dog API */}
-      <center>
+      {/* <center>
         <button className="button" onClick={generateASmile}>Click here for a smile!</button>
       </center>
       <center>
         <div className="dog">{dogImage !== '' ? <img src={dogImage} alt="cute dog" /> : ''}</div>
-      </center>
+      </center> */}
 
     </div>
 
