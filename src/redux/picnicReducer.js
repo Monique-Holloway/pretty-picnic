@@ -16,10 +16,6 @@ const picnicReducer = (state = initialState, action) => {
                 occasion: occasion
             }
         }
-        default:
-            return state
-    }
-    switch (action.type) {
         case ACTION_SET_COLOR: {
             const { color } = action.payload
             return {
@@ -27,10 +23,6 @@ const picnicReducer = (state = initialState, action) => {
                 color: color
             }
         }
-        default:
-            return state
-    }
-    switch (action.type) {
         case ACTION_SET_GUEST: {
             const { guests } = action.payload
             return {

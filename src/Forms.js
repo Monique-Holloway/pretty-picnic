@@ -7,38 +7,58 @@ function PicnicForm () {
 
     const picnicInfo = useSelector((state) => state)
     console.log('thisIsTheData', picnicInfo)
+
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [location, setLocation] = useState('');
+    const [date, setDate] = useState('');
+    const [email, setEmail] = useState('');
+
+    const data = {
+        name: name,
+        phone: phone,
+        location: location,
+        date: date,
+        email: email,
+        occasion: picnicInfo.occasion,
+        color: picnicInfo.color,
+        guests: picnicInfo.guests,
+    }
+
+    const handleClick=(event) => {
+        console.log(data)
+        event.preventDefault()
+    }
+
     return (
         <div className="FormContainer">
             <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Please type your FIRST and LAST name." />
+                    <Form.Control value={name} onChange={(event)=> setName(event.target.value)} type="text" placeholder="Please type your FIRST and LAST name." />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Phone Number</Form.Label>
-                    <Form.Control type="text" placeholder="Best contact number to reach you." />
+                    <Form.Control value={phone} onChange={(event)=> setPhone(event.target.value)}  type="text" placeholder="Best contact number to reach you." />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Picnic Location</Form.Label>
-                    <Form.Control type="text" placeholder="Name and address of the location." />
+                    <Form.Control value={location} onChange={(event)=> setLocation(event.target.value)}  type="text" placeholder="Name and address of the location." />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Date</Form.Label>
-                    <Form.Control type="text" placeholder="MM/DD/YYYY" />
+                    <Form.Control value={date} onChange={(event)=> setDate(event.target.value)}  type="text" placeholder="MM/DD/YYYY" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control value={email} onChange={(event)=> setEmail(event.target.value)}  type="email" placeholder="Enter email" />
                     <Form.Text className="text-muted">
                         We'll never share your information with anyone else.
                     </Form.Text>
                 </Form.Group>
 
-                
-                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group> */}
-                <Button className="button" variant="primary" type="submit">
+                {/* May have to use onClick={handleClick} */}
+                <Button className="button" variant="primary" type="submit" onClick={handleClick}>
                     Submit
                 </Button>
             </Form>

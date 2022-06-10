@@ -14,9 +14,9 @@ export const setColorScheme= (color) => {
     }
 };
 
-export const setGuestNumber= (number) => {
+export const setGuestNumber= (guests) => {
     return {
         type: ACTION_SET_GUEST,
-        payload: {number}
+        payload: {guests}
     }
 };
