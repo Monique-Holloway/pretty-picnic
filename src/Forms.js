@@ -14,25 +14,31 @@ function PicnicForm () {
     const [date, setDate] = useState('');
     const [email, setEmail] = useState('');
 
-    const data = {
-        name: name,
-        phone: phone,
-        location: location,
-        date: date,
-        email: email,
-        occasion: picnicInfo.occasion,
-        color: picnicInfo.color,
-        guests: picnicInfo.guests,
-    }
+   
 
-    const handleClick=(event) => {
-        console.log(data)
+    const handleSubmit=(event) => {
         event.preventDefault()
+        const data = {
+            name: name,
+            phone: phone,
+            location: location,
+            date: date,
+            email: email,
+            occasion: picnicInfo.occasion,
+            color: picnicInfo.color,
+            guests: picnicInfo.guests,
+        }
+        console.log(data)
+        fetch('http://localhost:3001/form', 
+        {method:'POST', headers:{'Content-Type': 'application/json'}, 
+        body: JSON.stringify(data)}).then(res => res.json()).then(data => {
+            console.log(data);
+        })
     }
 
     return (
         <div className="FormContainer">
-            <Form>
+            <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
                     <Form.Control value={name} onChange={(event)=> setName(event.target.value)} type="text" placeholder="Please type your FIRST and LAST name." />
@@ -58,7 +64,7 @@ function PicnicForm () {
                 </Form.Group>
 
                 {/* May have to use onClick={handleClick} */}
-                <Button className="button" variant="primary" type="submit" onClick={handleClick}>
+                <Button className="button" variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
