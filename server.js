@@ -12,15 +12,27 @@ app.use(cors());
 // Do I need the line below?
 // app.use(express.static(__dirname + "/public"));
 
-app.get('/form', (req, res) => {
-    res.send('form');
-  })
+// app.get('/form', (req, res) => {
+//     res.send('form);
+//   })
+
 
 app.post('/form', (req, res) => {
     const data = req.body
     console.log(data);
-    res.send(data)
-    // res.json({})
+    models.Customer.create({
+        occasion: data.occasion,
+        color: data.color,
+        guests: data.guests,
+        name: data.name,
+        phone: data.phone,
+        location: data.location,
+        date: data.date,
+        email: data.email,
+    }).then(customer => {
+        res.json(customer)
+    })
+    
 })
 
 
